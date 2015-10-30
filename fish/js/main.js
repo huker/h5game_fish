@@ -31,11 +31,15 @@ function init(){
     ctx2=can2.getContext('2d');
 
     bgPic.src='./src/background.jpg';
+
     canWidth=can1.width;
     canHeight=can1.height;
 
     ane=new aneObj();
     ane.init();
+
+    fruit=new fruitObj();
+    fruit.init();
 }
 
 
@@ -48,4 +52,5 @@ function gameloop(){
     //console.log(deltaTime);
     drawBackground();
     ane.draw();
+    fruit.draw();
 }
